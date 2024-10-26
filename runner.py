@@ -13,7 +13,7 @@ def run(playwright: Playwright) -> None:
     try:
         # Navigate to the page and add a long sleep to ensure everything is loaded
         page.goto("https://inflation-monitor.onrender.com/")
-        time.sleep(30)  # Wait 30 seconds after initial load
+        time.sleep(15)  # Wait 30 seconds after initial load
         
         # Click just one tab
         page.get_by_role("tab", name="Wholesale Prices and Arrivals").click()
