@@ -2,8 +2,11 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=True)  # Changed to headless=True
-    context = browser.new_context(timeout = 60000)
+    context = browser.new_context()
     page = context.new_page()
+    # Set timeouts at the page level
+    page.set_default_navigation_timeout(60000)  # 60 seconds for navigation
+    page.set_default_timeout(60000)
    
     # Navigate to the page and wait for it to be fully loaded
     page.goto("https://inflation-monitor.onrender.com/")
