@@ -2,7 +2,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=True)  # Changed to headless=True
-    context = browser.new_context()
+    context = browser.new_context(timeout = 60000)
     page = context.new_page()
    
     # Navigate to the page and wait for it to be fully loaded
