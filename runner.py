@@ -25,7 +25,7 @@ def run(playwright: Playwright) -> None:
         
         
         # Click just one tab
-        page.get_by_role("tab", name="Wholesale Prices and Arrivals").click()
+        page.get_by_role("tab", name="Arrivals and Wholesale Prices").click()
         time.sleep(10)  # Wait 10 seconds after click
             
     except Exception as e:
