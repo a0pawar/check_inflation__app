@@ -25,7 +25,7 @@ def run(playwright: Playwright) -> None:
         
         
         # Click just one tab
-        page.get_by_role("tab", name="Arrivals and Wholesale Prices").click()
+        #page.get_by_role("tab", name="Arrivals and Wholesale Prices").click()
         time.sleep(10)  # Wait 10 seconds after click
         page.goto("https://financial-markets-dashboard.onrender.com/")
         time.sleep(10)  
