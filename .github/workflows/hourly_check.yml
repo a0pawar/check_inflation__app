@@ -6,7 +6,7 @@ on:
 
 jobs:
   check-website:
-    runs-on: ubuntu-20.04  # Specify an older Ubuntu version for better package compatibility
+    runs-on: ubuntu-22.04  # Specify an older Ubuntu version for better package compatibility
     
     steps:
     - name: Checkout repository
